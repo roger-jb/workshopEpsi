@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :schools do
+    resources :campus
+  end
   #Devise(Gestion utilisateurs)
   devise_for :users,
              controllers: { registrations: 'users/registrations' },
