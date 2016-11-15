@@ -1,0 +1,12 @@
+<p>
+  <strong>Name:</strong>
+  <%= @campu.name %>
+</p>
+
+<p>
+  <strong>School:</strong>
+  <%= @campu.school_id %>
+</p>
+
+<%= link_to 'Edit', edit_school_campu_path(params[:school_id], @campu) %> |
+<%= link_to 'Back', school_campus_path %>

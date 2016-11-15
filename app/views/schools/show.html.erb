@@ -1,0 +1,15 @@
+<p>
+  <strong>Name:</strong>
+  <%= @school.name %>
+</p>
+
+<p>
+  <% @school.campus.each do |campu| %>
+    <strong>NameCampus:</strong>
+    <%= campu.name %>
+  <% end %>
+</p>
+
+<%= link_to 'Ajouter un campus', new_school_campu_path(@school) %> |
+<%= link_to 'Edit', edit_school_path(@school) %> |
+<%= link_to 'Back', schools_path %>

@@ -2,6 +2,9 @@
 <% if user_signed_in? %>
   <%= current_user.email %>
   <%= link_to 'Se déconnecter', destroy_user_session_path, method: :delete %>
+  <% if current_user.is_administrator? %>
+    <%= link_to 'Ecoles', schools_path %>
+  <% end %>
 <% else %>
   <%= link_to 'Connexion', new_user_session_path %>
 <% end %>
