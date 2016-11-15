@@ -9,6 +9,26 @@
   </div>
 
   <div class="field">
+    <%= f.label :is_student %><br />
+    <%= f.check_box :is_student %>
+  </div>
+
+  <div class="field">
+    <%= f.label :is_tutor %><br />
+    <%= f.check_box :is_tutor %>
+  </div>
+
+  <div class="field">
+    <%= f.label :is_administrator %><br />
+    <%= f.check_box :is_administrator %>
+  </div>
+
+  <div class="field">
+    <%= f.label :is_teacher %><br />
+    <%= f.check_box :is_teacher %>
+  </div>
+
+  <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
